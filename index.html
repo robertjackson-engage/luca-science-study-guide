@@ -106,10 +106,11 @@ h2.pix{font-size:clamp(11px,2.2vw,16px);margin:0 0 12px;color:var(--info)}
 /* reference */
 #ref{position:fixed;inset:0;background:rgba(3,8,18,.88);display:none;z-index:70;overflow:auto;padding:16px} #ref.on{display:block} #ref .inner{max-width:900px;margin:0 auto}
 table{width:100%;border-collapse:collapse;font-size:15px;margin:8px 0 14px} td,th{border:1px solid var(--line);padding:7px 9px;text-align:left} th{background:#07111f;color:var(--info);font-size:13px}
-.tbl2{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-.tip{background:#07111f;border-left:4px solid var(--accent);padding:10px 12px;border-radius:8px;margin:8px 0;font-size:15px}
+.tbl2{columns:300px;column-gap:14px}.tbl2 .card{break-inside:avoid;margin:0 0 14px;overflow-x:auto}
+#ref table{font-size:14px}#ref td,#ref th{padding:6px 8px}
+.tip{background:#07111f;border-left:4px solid var(--accent);padding:10px 12px;border-radius:8px;margin:10px 0 0;font-size:15px}
 .timer{font-family:var(--pix);font-size:18px;color:var(--bad)} .center{text-align:center} .mt{margin-top:14px} .hidden{display:none!important} .help{font-size:14px;color:var(--muted);font-weight:700}
-.formula{font-size:20px;font-weight:900;color:var(--accent);background:#07111f;border-radius:10px;padding:8px 12px;margin:6px 0;display:inline-block}
+.formula{font-size:18px;font-weight:900;color:var(--accent);background:#07111f;border-radius:10px;padding:8px 12px;margin:0 0 8px;display:block}
 </style>
 </head>
 <body>
@@ -174,12 +175,12 @@ table{width:100%;border-collapse:collapse;font-size:15px;margin:8px 0 14px} td,t
   <div class="topbar"><h1 class="pix" style="margin:0">FORMULA SHEET</h1><button class="btn sm" onclick="closeRef()">✕ Close</button></div>
   <div class="tbl2">
     <div class="card"><h2 class="pix">FORMULAS</h2>
-      <div class="formula">Weight = m × g &nbsp; (g = 10 m/s²)</div><br>
-      <div class="formula">avg speed = distance ÷ time</div><br>
-      <div class="formula">velocity = displacement ÷ time</div><br>
-      <div class="formula">a = (v<sub>f</sub> − v<sub>i</sub>) ÷ t</div><br>
-      <div class="formula">v<sub>f</sub> = v<sub>i</sub> + a·t &nbsp; (free fall: a = 10)</div><br>
-      <div class="formula">distance = speed × time</div><br>
+      <div class="formula">Weight = m × g &nbsp; (g = 10 m/s²)</div>
+      <div class="formula">avg speed = distance ÷ time</div>
+      <div class="formula">velocity = displacement ÷ time</div>
+      <div class="formula">a = (v<sub>f</sub> − v<sub>i</sub>) ÷ t</div>
+      <div class="formula">v<sub>f</sub> = v<sub>i</sub> + a·t &nbsp; (free fall: a = 10)</div>
+      <div class="formula">distance = speed × time</div>
       <div class="formula">F = m × a &nbsp;&nbsp; a = F ÷ m</div>
       <div class="tip">Slowing down → negative acceleration. Minutes × 60 = seconds.</div>
     </div>
